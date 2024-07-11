@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
     const router = useRouter();
+
     return (
         <>
             <div className="w-screen lg:h-[80vh] bg-black">
@@ -65,12 +66,14 @@ export default function Footer() {
                                     <h1 className=" md:text-2xl">E-Commerce</h1>
                                     <a
                                         href="https://shopee.co.id/levelup_style"
+                                        target="blank"
                                         className="link-underline max-w-11 md:max-w-14 mt-2 text-xs md:text-base font-light cursor-pointer"
                                     >
                                         Shopee
                                     </a>
                                     <a
                                         href="https://www.tiktok.com/@levelupstyleid"
+                                        target="blank"
                                         className="link-underline max-w-9 md:max-w-12 text-xs md:text-base font-light cursor-pointer"
                                     >
                                         Tiktok

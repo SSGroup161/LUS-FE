@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import MainNavbar from "../../components/MainNavbar";
 import Footer from "../../components/Footer";
 
-export default function Home() {
+export default function TermsConditions() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

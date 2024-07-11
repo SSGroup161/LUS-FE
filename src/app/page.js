@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-export default function TermsConditions() {
+export default function Home() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isHover1, setIsHover1] = useState(false);
     const [isHover2, setIsHover2] = useState(false);
@@ -33,11 +33,42 @@ export default function TermsConditions() {
         });
     };
 
+    const title = "LEVEL UP STYLE© Official Website";
+    const description =
+        "Welcome to the website dedicated to Level Up Style and can be accessed via the URL www.levelupstyle.id Please read carefully the Terms of Use of this website. By accessing this site you accept the website's Terms of Use without objection.";
+    const canonicalUrl = "https://www.levelupstyle.id/";
+
+    useEffect(() => {
+        document.title = title;
+
+        const metaDescription = document.querySelector(
+            'meta[name="description"]'
+        );
+        if (metaDescription) {
+            metaDescription.setAttribute("content", description);
+        } else {
+            const meta = document.createElement("meta");
+            meta.setAttribute("name", "description");
+            meta.setAttribute("content", description);
+            document.head.appendChild(meta);
+        }
+
+        const linkCanonical = document.querySelector('link[rel="canonical"]');
+        if (linkCanonical) {
+            linkCanonical.setAttribute("href", canonicalUrl);
+        } else {
+            const link = document.createElement("link");
+            link.setAttribute("rel", "canonical");
+            link.setAttribute("href", canonicalUrl);
+            document.head.appendChild(link);
+        }
+    }, [title, description, canonicalUrl]);
+
     return (
         <div>
             <Navbar />
             <div className="">
-                <section className="h-screen w-screen flex justify-center items-center relative overflow-hidden">
+                <section className="h-screen w-full flex justify-center items-center relative overflow-hidden">
                     <video
                         src="https://res.cloudinary.com/dixxtnquz/video/upload/v1720424068/Levelup%20Style/0708_1_ejozfk.mov"
                         width="100%"
@@ -319,7 +350,7 @@ export default function TermsConditions() {
                                     height="100%"
                                     className="w-full h-full"
                                 />
-                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-64 ">
+                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80 ">
                                     <h2 className="text-xs md:text-2xl font-medium font-playfair">
                                         One Set <br />
                                         Collection
@@ -337,7 +368,7 @@ export default function TermsConditions() {
                                     height="100%"
                                     className="w-full h-full"
                                 />
-                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-64">
+                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
                                     <h2 className="text-xs md:text-2xl font-medium font-playfair">
                                         Gamis <br />
                                         Collection
@@ -355,7 +386,7 @@ export default function TermsConditions() {
                                     height="100%"
                                     className="w-full h-full"
                                 />
-                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-64">
+                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
                                     <h2 className="text-xs md:text-2xl font-medium font-playfair">
                                         Blouse <br />
                                         Collection
@@ -373,7 +404,7 @@ export default function TermsConditions() {
                                     height="100%"
                                     className="w-full h-full"
                                 />
-                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-64">
+                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
                                     <h2 className="text-xs md:text-2xl font-medium font-playfair">
                                         Sweater <br />
                                         Collection
@@ -391,7 +422,7 @@ export default function TermsConditions() {
                                     height="100%"
                                     className="w-full h-full"
                                 />
-                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-64">
+                                <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
                                     <h2 className="text-xs md:text-2xl font-medium font-playfair">
                                         Cardigan <br />
                                         Collection

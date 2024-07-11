@@ -51,7 +51,7 @@ export default function Navbar() {
                     className={`font-belgan tracking-widest transition-all duration-700 ease-in-out ${
                         isScrolled
                             ? "text-black text-4xl 2xl:text-5xl transform scale-75 translate-y-0"
-                            : "text-[3.5rem] md:text-8xl lg:text-[12rem] text-white mt-6 transform scale-100 md:scale-110 2xl:scale-150 opacity-70 translate-y-10 translate-x-12 md:translate-x-6 md:translate-y-20 lg:translate-y-36"
+                            : "text-[3.5rem] md:text-8xl lg:text-[12rem] text-white mt-6 transform scale-100 md:scale-110 2xl:scale-x-125 opacity-70 translate-y-10 translate-x-12 md:translate-x-6 md:translate-y-20 lg:translate-y-36"
                     }`}
                 >
                     LEVEL UP
@@ -104,20 +104,7 @@ export default function Navbar() {
                                 <div
                                     className="flex items-center gap-2 cursor-pointer"
                                     id="SubMenu"
-                                >
-                                    <h1 className="font-playfair text-lg">
-                                        Product
-                                    </h1>
-                                    <img
-                                        src="/rightArrow.svg"
-                                        width={100}
-                                        height={100}
-                                        className="w-4 mt-1 hidden-img"
-                                    />
-                                </div>
-                                <div
-                                    className="flex items-center gap-2 cursor-pointer"
-                                    id="SubMenu"
+                                    onClick={() => router.push("/about")}
                                 >
                                     <h1 className="font-playfair text-lg">
                                         About
@@ -132,6 +119,26 @@ export default function Navbar() {
                                 <div
                                     className="flex items-center gap-2 cursor-pointer"
                                     id="SubMenu"
+                                    onClick={() =>
+                                        router.push("/underconstruction")
+                                    }
+                                >
+                                    <h1 className="font-playfair text-lg">
+                                        Products
+                                    </h1>
+                                    <img
+                                        src="/rightArrow.svg"
+                                        width={100}
+                                        height={100}
+                                        className="w-4 mt-1 hidden-img"
+                                    />
+                                </div>
+                                <div
+                                    className="flex items-center gap-2 cursor-pointer"
+                                    id="SubMenu"
+                                    onClick={() =>
+                                        router.push("/underconstruction")
+                                    }
                                 >
                                     <h1 className="font-playfair text-lg">
                                         Edits
