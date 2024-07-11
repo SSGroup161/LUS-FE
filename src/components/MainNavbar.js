@@ -1,38 +1,21 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Drawer } from "flowbite-react";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleClose = () => setIsOpen(false);
-
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        setIsScrolled(scrollPosition > 0);
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
 
     return (
         <div>
             <section
-                className={` w-screen fixed top-0 z-50 h-20 items-center md:py-6 bg-white ${
-                    isScrolled ? "bg-opacity-100" : "bg-opacity-0"
-                }  flex transition-all justify-between duration-500 ease-in-out md:px-16 pr-2`}
+                className={` w-screen fixed top-0 z-50 h-20 items-center md:py-6 bg-white flex transition-all justify-between duration-500 ease-in-out md:px-16 pr-2`}
             >
                 <div
-                    className={`transition-opacity hidden md:block duration-700 ease-in-out ${
-                        isScrolled ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`transition-opacity hidden md:block duration-700 ease-in-out`}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -48,11 +31,8 @@ export default function Navbar() {
                     </svg>
                 </div>
                 <h1
-                    className={`font-belgan tracking-widest transition-all duration-700 ease-in-out ${
-                        isScrolled
-                            ? "text-black text-4xl 2xl:text-5xl transform scale-75 translate-y-0"
-                            : "text-[3.5rem] md:text-8xl lg:text-[12rem] text-white mt-6 transform scale-100 md:scale-110 2xl:scale-150 opacity-70 translate-y-10 translate-x-12 md:translate-x-6 md:translate-y-20 lg:translate-y-36"
-                    }`}
+                    className={`font-belgan tracking-widest transition-all duration-700 ease-in-out text-black ps-4 text-3xl 2xl:text-5xl cursor-pointer`}
+                    onClick={() => router.push("/")}
                 >
                     LEVEL UP
                 </h1>
@@ -70,7 +50,7 @@ export default function Navbar() {
                                 fillRule="evenodd"
                                 clipRule="evenodd"
                                 d="M36.3125 12.25C36.3125 12.5981 36.1742 12.9319 35.9281 13.1781C35.6819 13.4242 35.3481 13.5625 35 13.5625H7C6.6519 13.5625 6.31806 13.4242 6.07192 13.1781C5.82578 12.9319 5.6875 12.5981 5.6875 12.25C5.6875 11.9019 5.82578 11.5681 6.07192 11.3219C6.31806 11.0758 6.6519 10.9375 7 10.9375H35C35.3481 10.9375 35.6819 11.0758 35.9281 11.3219C36.1742 11.5681 36.3125 11.9019 36.3125 12.25ZM36.3125 21C36.3125 21.3481 36.1742 21.6819 35.9281 21.9281C35.6819 22.1742 35.3481 22.3125 35 22.3125H7C6.6519 22.3125 6.31806 22.1742 6.07192 21.9281C5.82578 21.6819 5.6875 21.3481 5.6875 21C5.6875 20.6519 5.82578 20.3181 6.07192 20.0719C6.31806 19.8258 6.6519 19.6875 7 19.6875H35C35.3481 19.6875 35.6819 19.8258 35.9281 20.0719C36.1742 20.3181 36.3125 20.6519 36.3125 21ZM36.3125 29.75C36.3125 30.0981 36.1742 30.4319 35.9281 30.6781C35.6819 30.9242 35.3481 31.0625 35 31.0625H7C6.6519 31.0625 6.31806 30.9242 6.07192 30.6781C5.82578 30.4319 5.6875 30.0981 5.6875 29.75C5.6875 29.4019 5.82578 29.0681 6.07192 28.8219C6.31806 28.5758 6.6519 28.4375 7 28.4375H35C35.3481 28.4375 35.6819 28.5758 35.9281 28.8219C36.1742 29.0681 36.3125 29.4019 36.3125 29.75Z"
-                                fill={`${isScrolled ? "#0D0A07" : "#ffffff"}`}
+                                fill={`#0D0A07`}
                             />
                         </svg>
                     </button>
@@ -164,6 +144,9 @@ export default function Navbar() {
                                     <div
                                         className="flex items-center gap-2 cursor-pointer"
                                         id="SubMenu"
+                                        onClick={() =>
+                                            router.push("/privacy-policy")
+                                        }
                                     >
                                         <h1 className="font-playfair text-lg">
                                             Privacy Policy

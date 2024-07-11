@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-export default function Home() {
+export default function TermsConditions() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isHover1, setIsHover1] = useState(false);
     const [isHover2, setIsHover2] = useState(false);
@@ -27,7 +28,7 @@ export default function Home() {
 
     const scrollToDown = () => {
         window.scrollTo({
-            top: 900,
+            top: 780,
             behavior: "smooth",
         });
     };
@@ -413,6 +414,7 @@ export default function Home() {
                     </div>
                 </section>
             </div>
+            <Footer />
         </div>
     );
 }

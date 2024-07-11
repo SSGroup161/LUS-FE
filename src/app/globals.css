@@ -214,3 +214,40 @@
 .parentSVG {
     transition: opacity 0.5s ease-in-out;
 }
+
+.link-underline {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.link-underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.link-underline:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+.link-underline.active::after {
+    visibility: visible;
+    width: 100%;
+}
+
+.hidden-img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#SubMenu:hover .hidden-img {
+    opacity: 1;
+}
