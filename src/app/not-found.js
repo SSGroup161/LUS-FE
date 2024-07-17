@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function NotFound() {
     const router = useRouter();
@@ -10,11 +11,12 @@ export default function NotFound() {
             <div className="md:w-screen md:h-screen w-full flex justify-center items-center">
                 <div className="flex flex-col mt-14">
                     <div className=" flex flex-col justify-center items-center relative">
-                        <img
+                        <Image
                             src="LevelUpAbu.svg"
                             alt="LevelUp"
-                            width={100}
-                            height={100}
+                            width="1000"
+                            height="1000"
+                            quality={100}
                             className="w-10 mb-6"
                         />
                         <div className="absolute text-center top-14">
@@ -22,14 +24,15 @@ export default function NotFound() {
                                 OOPS!
                             </h1>
                             <h1 className="font-roboto font-black text-4xl md:text-5xl text-[#414042] w-[35rem]">
-                                Looks like you're lost
+                                Looks like you&apos;re lost
                             </h1>
                         </div>
-                        <img
+                        <Image
                             src="AssetNotfound.svg"
                             alt="AssetNotfound"
-                            width={100}
-                            height={100}
+                            width="1000"
+                            height="1000"
+                            quality={100}
                             className="w-96 lg:w-80 mt-6 md:mt-10 z-20"
                         />
                     </div>

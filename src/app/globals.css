@@ -251,3 +251,7 @@
 #SubMenu:hover .hidden-img {
     opacity: 1;
 }
+
+.shadow-custom {
+    box-shadow: 17.988px 17.988px 11.992px 0px rgba(0, 0, 0, 0.47);
+}

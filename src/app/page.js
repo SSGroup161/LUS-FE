@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Home() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -9,6 +11,7 @@ export default function Home() {
     const [isHover2, setIsHover2] = useState(false);
     const [isHover3, setIsHover3] = useState(false);
     const [isHover4, setIsHover4] = useState(false);
+    const router = useRouter();
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
@@ -70,7 +73,7 @@ export default function Home() {
             <div className="">
                 <section className="h-screen w-full flex justify-center items-center relative overflow-hidden">
                     <video
-                        src="https://res.cloudinary.com/dixxtnquz/video/upload/v1720424068/Levelup%20Style/0708_1_ejozfk.mov"
+                        src="https://res.cloudinary.com/dixxtnquz/video/upload/v1720768833/Levelup%20Style/tvc_LUS_iqan9m.mp4"
                         width="100%"
                         height="100%"
                         alt="videobg"
@@ -130,10 +133,10 @@ export default function Home() {
                         <div className="flex flex-col md:flex-row md:w-full justify-evenly py-12 lg:gap-7 2xl:gap-14">
                             <div className="flex flex-col justify-center items-center">
                                 <div className="w-64 h-96 overflow-hidden rounded-t-2xl relative flex justify-center items-end mt-10 lg:mt-0">
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset1.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
                                         className={`w-full rounded-t-2xl transition-opacity absolute duration-500 ${
                                             isHover1
                                                 ? "opacity-0"
@@ -141,10 +144,11 @@ export default function Home() {
                                         }`}
                                         alt="DefaultImage"
                                     />
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset1Hover.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
                                         className={`w-full rounded-t-2xl transition-opacity duration-500 absolute top-0 left-0 ${
                                             isHover1
                                                 ? "opacity-100"
@@ -154,7 +158,12 @@ export default function Home() {
                                         onMouseEnter={() => setIsHover1(true)}
                                         onMouseLeave={() => setIsHover1(false)}
                                     />
-                                    <button className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out">
+                                    <button
+                                        className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See Details
                                     </button>
                                 </div>
@@ -170,10 +179,11 @@ export default function Home() {
 
                             <div className="flex flex-col justify-center items-center">
                                 <div className="w-64 h-96 overflow-hidden rounded-t-2xl relative flex justify-center items-end mt-10 lg:mt-0">
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset2.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
                                         className={`w-full rounded-t-2xl transition-opacity absolute duration-500 ${
                                             isHover2
                                                 ? "opacity-0"
@@ -181,10 +191,11 @@ export default function Home() {
                                         }`}
                                         alt="DefaultImage"
                                     />
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset2Hover.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
                                         className={`w-full rounded-t-2xl transition-opacity duration-500 absolute top-0 left-0 ${
                                             isHover2
                                                 ? "opacity-100"
@@ -194,7 +205,12 @@ export default function Home() {
                                         onMouseEnter={() => setIsHover2(true)}
                                         onMouseLeave={() => setIsHover2(false)}
                                     />
-                                    <button className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out">
+                                    <button
+                                        className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See Details
                                     </button>
                                 </div>
@@ -212,10 +228,11 @@ export default function Home() {
                         <div className="flex flex-col md:flex-row md:w-full justify-evenly md:py-12 lg:gap-7 2xl:gap-14">
                             <div className="flex flex-col justify-center items-center">
                                 <div className="w-64 h-96 overflow-hidden rounded-t-2xl relative flex justify-center items-end">
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset3.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
                                         className={`w-full rounded-t-2xl transition-opacity absolute duration-500 ${
                                             isHover3
                                                 ? "opacity-0"
@@ -223,10 +240,10 @@ export default function Home() {
                                         }`}
                                         alt="DefaultImage"
                                     />
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset3Hover.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
                                         className={`w-full rounded-t-2xl transition-opacity duration-500 absolute top-0 left-0 ${
                                             isHover3
                                                 ? "opacity-100"
@@ -236,7 +253,12 @@ export default function Home() {
                                         onMouseEnter={() => setIsHover3(true)}
                                         onMouseLeave={() => setIsHover3(false)}
                                     />
-                                    <button className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out">
+                                    <button
+                                        className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See Details
                                     </button>
                                 </div>
@@ -252,10 +274,11 @@ export default function Home() {
 
                             <div className="flex flex-col justify-center items-center">
                                 <div className="w-64 h-96 overflow-hidden rounded-t-2xl relative flex justify-center items-end mt-10 md:mt-0">
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset4.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
                                         className={`w-full rounded-t-2xl transition-opacity absolute duration-500 ${
                                             isHover4
                                                 ? "opacity-0"
@@ -263,10 +286,10 @@ export default function Home() {
                                         }`}
                                         alt="DefaultImage"
                                     />
-                                    <img
+                                    <Image
                                         src="/LevelUpAsset4Hover.jpg"
-                                        width="200"
-                                        height="200"
+                                        width="1000"
+                                        height="1000"
                                         className={`w-full rounded-t-2xl transition-opacity duration-500 absolute top-0 left-0 ${
                                             isHover4
                                                 ? "opacity-100"
@@ -276,7 +299,12 @@ export default function Home() {
                                         onMouseEnter={() => setIsHover4(true)}
                                         onMouseLeave={() => setIsHover4(false)}
                                     />
-                                    <button className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out">
+                                    <button
+                                        className="bg-white/50 text-black/50 text-sm hover:bg-black hover:text-white px-4 py-2 z-10 mb-6 rounded-full transition-colors duration-300 ease-in-out"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See Details
                                     </button>
                                 </div>
@@ -292,7 +320,10 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full flex justify-center items-center mt-14">
-                        <button className="cursor-pointer relative group overflow-hidden border-2 px-16 py-2 border-black">
+                        <button
+                            className="cursor-pointer relative group overflow-hidden border-2 px-16 py-2 border-black"
+                            onClick={() => router.push("/underconstruction")}
+                        >
                             <span className=" text-white relative z-10 group-hover:text-black duration-500">
                                 See All
                             </span>
@@ -307,8 +338,8 @@ export default function Home() {
                     <div className="flex items-center justify-between gap-10 lg:gap-44 2xl:gap-80 max-w-screen-2xl flex-col-reverse lg:flex-row px-10 md:px-0 py-20">
                         <div className="max-w-[40rem] flex flex-col gap-6">
                             <h1 className="font-playfair text-white text-4xl">
-                                Fashion is more than just clothes, it's about
-                                self-expression & being true to ourselves
+                                Fashion is more than just clothes, it&apos;s
+                                about self-expression & being true to ourselves
                             </h1>
                             <p className="font-playfair text-white">
                                 Regardless of background, age or body shape,
@@ -316,7 +347,10 @@ export default function Home() {
                                 & that makes them feel confidents
                             </p>
                             <div className="w-full flex justify-center items-center mt-8">
-                                <button className="cursor-pointer relative group overflow-hidden border-2 px-16 py-2 border-white">
+                                <button
+                                    className="cursor-pointer relative group overflow-hidden border-2 px-16 py-2 border-white"
+                                    onClick={() => router.push("/about")}
+                                >
                                     <span className=" text-black relative z-10 group-hover:text-white duration-500">
                                         See More
                                     </span>
@@ -327,11 +361,11 @@ export default function Home() {
                                 </button>
                             </div>
                         </div>
-                        <img
+                        <Image
                             src="/AssetHome1.png"
                             alt="AssetHome1"
-                            width={200}
-                            height={100}
+                            width="1000"
+                            height="1000"
                             className="w-96 h-auto"
                         />
                     </div>
@@ -343,29 +377,37 @@ export default function Home() {
                         </h1>
                         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-screen px-6 md:px-14">
                             <div className=" relative w-full h-full row-span-3">
-                                <img
+                                <Image
                                     src="/AssetHomeGrid1.png"
                                     alt="AssetHomeGrid1"
-                                    width="100%"
-                                    height="100%"
+                                    width="1000"
+                                    height="1000"
+                                    quality={100}
                                     className="w-full h-full"
+                                    style={{ width: "100%", height: "100%" }}
                                 />
                                 <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80 ">
                                     <h2 className="text-xs md:text-2xl font-medium font-playfair">
                                         One Set <br />
                                         Collection
                                     </h2>
-                                    <button className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black">
+                                    <button
+                                        className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See details
                                     </button>
                                 </div>
                             </div>
                             <div className=" relative w-full h-full row-span-2">
-                                <img
+                                <Image
                                     src="/AssetHomeGrid2.png"
                                     alt="AssetHomeGrid2"
-                                    width="100%"
-                                    height="100%"
+                                    width="1000"
+                                    height="1000"
+                                    quality={100}
                                     className="w-full h-full"
                                 />
                                 <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
@@ -373,17 +415,23 @@ export default function Home() {
                                         Gamis <br />
                                         Collection
                                     </h2>
-                                    <button className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black">
+                                    <button
+                                        className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See details
                                     </button>
                                 </div>
                             </div>
                             <div className=" relative w-full h-full">
-                                <img
+                                <Image
                                     src="/AssetHomeGrid4.png"
                                     alt="AssetHomeGrid4"
-                                    width="100%"
-                                    height="100%"
+                                    width="1000"
+                                    height="1000"
+                                    quality={100}
                                     className="w-full h-full"
                                 />
                                 <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
@@ -391,17 +439,23 @@ export default function Home() {
                                         Blouse <br />
                                         Collection
                                     </h2>
-                                    <button className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black">
+                                    <button
+                                        className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See details
                                     </button>
                                 </div>
                             </div>
                             <div className=" relative w-full h-full">
-                                <img
+                                <Image
                                     src="/AssetHomeGrid5.png"
                                     alt="AssetHomeGrid5"
-                                    width="100%"
-                                    height="100%"
+                                    width="1000"
+                                    height="1000"
+                                    quality={100}
                                     className="w-full h-full"
                                 />
                                 <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
@@ -409,17 +463,23 @@ export default function Home() {
                                         Sweater <br />
                                         Collection
                                     </h2>
-                                    <button className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black">
+                                    <button
+                                        className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See details
                                     </button>
                                 </div>
                             </div>
                             <div className=" relative w-full h-full">
-                                <img
+                                <Image
                                     src="/AssetHomeGrid3.png"
                                     alt="AssetHomeGrid3"
-                                    width="100%"
-                                    height="100%"
+                                    width="1000"
+                                    height="1000"
+                                    quality={100}
                                     className="w-full h-full"
                                 />
                                 <div className="absolute bottom-4 left-4 text-white flex items-center gap-5 md:gap-36 2xl:gap-80">
@@ -427,17 +487,23 @@ export default function Home() {
                                         Cardigan <br />
                                         Collection
                                     </h2>
-                                    <button className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black">
+                                    <button
+                                        className="mt-2 py-1 border-b-2 border-white text-white text-xs md:text-lg font-playfair font-semibold transition-colors duration-500 cursor-pointer hover:text-black hover:border-black"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         See details
                                     </button>
                                 </div>
                             </div>
                             <div className="bg-white relative w-full h-full flex justify-center items-center">
-                                <img
+                                <Image
                                     src="/AssetHomeGrid6.png"
                                     alt="AssetHomeGrid6"
-                                    width="100"
-                                    height="100"
+                                    width="1000"
+                                    height="1000"
+                                    quality={100}
                                     className="w-44 h-44 hidden lg:block"
                                 />
                             </div>

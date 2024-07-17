@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Footer() {
     const router = useRouter();
@@ -11,11 +12,12 @@ export default function Footer() {
                 <div className="max-w-screen-2xl h-full px-12 md:px-32 lg:px-20 py-20 md:py-32 2xl:py-48 m-auto">
                     <div className="flex gap-12 items-center justify-center w-full h-full flex-col lg:flex-row">
                         <div className="flex-1 flex justify-center items-center h-full">
-                            <img
+                            <Image
                                 src="/LogoPutih.png"
                                 alt="LevelUpStyle"
-                                width="100"
-                                height="100"
+                                width="1000"
+                                height="1000"
+                                quality={100}
                                 className="w-32 md:w-48"
                             />
                         </div>
@@ -29,7 +31,7 @@ export default function Footer() {
                                         className="link-underline max-w-8 md:max-w-12 mt-2 text-xs md:text-base font-light cursor-pointer"
                                         onClick={() => router.push("/faqs")}
                                     >
-                                        FAQ's
+                                        FAQ&apos;s
                                     </p>
                                     <p
                                         className="link-underline max-w-20 md:max-w-28 text-xs md:text-base font-light cursor-pointer"
@@ -50,13 +52,26 @@ export default function Footer() {
                                 </div>
                                 <div className="font-roboto text-white flex flex-col gap-5 flex-1">
                                     <h1 className=" md:text-2xl">Company</h1>
-                                    <p className="link-underline max-w-14 md:max-w-20 mt-2 text-xs md:text-base font-light cursor-pointer">
+                                    <p
+                                        className="link-underline max-w-14 md:max-w-20 mt-2 text-xs md:text-base font-light cursor-pointer"
+                                        onClick={() => router.push("/about")}
+                                    >
                                         About Us
                                     </p>
-                                    <p className="link-underline max-w-14 md:max-w-20 text-xs md:text-base font-light cursor-pointer">
+                                    <p
+                                        className="link-underline max-w-14 md:max-w-20 text-xs md:text-base font-light cursor-pointer"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         Products
                                     </p>
-                                    <p className="link-underline max-w-8 md:max-w-10 text-xs md:text-base font-light cursor-pointer">
+                                    <p
+                                        className="link-underline max-w-8 md:max-w-10 text-xs md:text-base font-light cursor-pointer"
+                                        onClick={() =>
+                                            router.push("/underconstruction")
+                                        }
+                                    >
                                         Edits
                                     </p>
                                 </div>
@@ -85,6 +100,7 @@ export default function Footer() {
                                     </h1>
                                     <a
                                         href="https://wa.me/6285772284721"
+                                        // target="blank"
                                         className="link-underline max-w-24 md:max-w-32 mt-2 text-xs md:text-base font-light cursor-pointer"
                                     >
                                         ‪+62 857‑7228‑4721‬

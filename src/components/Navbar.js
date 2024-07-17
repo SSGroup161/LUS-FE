@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Drawer } from "flowbite-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -94,10 +95,12 @@ export default function Navbar() {
                                     <h1 className="font-playfair text-lg">
                                         Home
                                     </h1>
-                                    <img
+                                    <Image
                                         src="/rightArrow.svg"
-                                        width={100}
-                                        height={100}
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
+                                        alt="HoverImage"
                                         className="w-4 mt-1 hidden-img"
                                     />
                                 </div>
@@ -109,10 +112,12 @@ export default function Navbar() {
                                     <h1 className="font-playfair text-lg">
                                         About
                                     </h1>
-                                    <img
+                                    <Image
                                         src="/rightArrow.svg"
-                                        width={100}
-                                        height={100}
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
+                                        alt="HoverImage"
                                         className="w-4 mt-1 hidden-img"
                                     />
                                 </div>
@@ -126,10 +131,12 @@ export default function Navbar() {
                                     <h1 className="font-playfair text-lg">
                                         Products
                                     </h1>
-                                    <img
+                                    <Image
                                         src="/rightArrow.svg"
-                                        width={100}
-                                        height={100}
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
+                                        alt="HoverImage"
                                         className="w-4 mt-1 hidden-img"
                                     />
                                 </div>
@@ -143,10 +150,12 @@ export default function Navbar() {
                                     <h1 className="font-playfair text-lg">
                                         Edits
                                     </h1>
-                                    <img
+                                    <Image
                                         src="/rightArrow.svg"
-                                        width={100}
-                                        height={100}
+                                        width="1000"
+                                        height="1000"
+                                        quality={100}
+                                        alt="HoverImage"
                                         className="w-4 mt-1 hidden-img"
                                     />
                                 </div>
@@ -159,26 +168,33 @@ export default function Navbar() {
                                         onClick={() => router.push("/faqs")}
                                     >
                                         <h1 className="font-playfair text-lg">
-                                            FAQ's
+                                            FAQ&apos;s
                                         </h1>
-                                        <img
+                                        <Image
                                             src="/rightArrow.svg"
-                                            width={100}
-                                            height={100}
+                                            width="1000"
+                                            height="1000"
+                                            quality={100}
+                                            alt="HoverImage"
                                             className="w-4 mt-1 hidden-img"
                                         />
                                     </div>
                                     <div
                                         className="flex items-center gap-2 cursor-pointer"
                                         id="SubMenu"
+                                        onClick={() =>
+                                            router.push("/privacy-policy")
+                                        }
                                     >
                                         <h1 className="font-playfair text-lg">
                                             Privacy Policy
                                         </h1>
-                                        <img
+                                        <Image
                                             src="/rightArrow.svg"
-                                            width={100}
-                                            height={100}
+                                            width="1000"
+                                            height="1000"
+                                            quality={100}
+                                            alt="HoverImage"
                                             className="w-4 mt-1 hidden-img"
                                         />
                                     </div>
@@ -192,10 +208,12 @@ export default function Navbar() {
                                         <h1 className="font-playfair text-lg">
                                             Terms & Conditions
                                         </h1>
-                                        <img
+                                        <Image
                                             src="/rightArrow.svg"
-                                            width={100}
-                                            height={100}
+                                            width="1000"
+                                            height="1000"
+                                            quality={100}
+                                            alt="HoverImage"
                                             className="w-4 mt-1 hidden-img"
                                         />
                                     </div>

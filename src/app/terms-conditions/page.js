@@ -75,8 +75,8 @@ export default function TermsConditions() {
                         <br />
                         <br />
                         Please read the Terms of Use carefully these websites.
-                        By accessing this site it means you accept the Website's
-                        Terms of Use without objection.
+                        By accessing this site it means you accept the
+                        Website&apos;s Terms of Use without objection.
                         <br />
                         <br />
                         This website was developed for and published by PT.
@@ -112,8 +112,8 @@ export default function TermsConditions() {
                     >
                         To access and use these websites, you are adults (aged
                         18 years or over), and have valid email address. (If you
-                        haven't fulfilled these criteria, prior permission is
-                        required from your parents).
+                        haven&apos;t fulfilled these criteria, prior permission
+                        is required from your parents).
                         <br />
                         <br />
                         You will be asked to fill in the required sections on a

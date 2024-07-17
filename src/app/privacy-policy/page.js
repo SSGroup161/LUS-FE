@@ -20,9 +20,10 @@ export default function PrivacyPolicy() {
                         1. INTRODUCTION
                     </h1>
                     <p className="font-roboto mt-4 font-light tracking-wider text-sm">
-                        This Privacy Policy explains how Level Up Style ("we",
-                        "us", "our") collects, uses, stores, and shares your
-                        personal information when you use our website.
+                        This Privacy Policy explains how Level Up Style
+                        (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;)
+                        collects, uses, stores, and shares your personal
+                        information when you use our website.
                     </p>
                     <h1 className="font-normal text-base font-roboto tracking-widest mt-10">
                         2. INFORMATION WE COLLECT
@@ -486,8 +487,8 @@ export default function PrivacyPolicy() {
                         available on it or for uploading content may cause
                         bandwidth usage big ones by you that can be expensive so
                         you have to be careful not to exceed any bandwidth.
-                        limit' on your account with your internet or provider
-                        your data service.
+                        limit&apos; on your account with your internet or
+                        provider your data service.
                         <br />
                         <br />
                     </p>

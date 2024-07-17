@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Underconstruction() {
     const router = useRouter();
@@ -10,11 +11,12 @@ export default function Underconstruction() {
             <div className="md:w-screen md:h-screen w-full flex justify-center items-center">
                 <div className="flex flex-col mt-10">
                     <div className=" flex flex-col justify-center items-center relative">
-                        <img
+                        <Image
                             src="LevelUpAbu.svg"
                             alt="LevelUp"
-                            width={100}
-                            height={100}
+                            width="1000"
+                            height="1000"
+                            quality={100}
                             className="w-10 mb-6"
                         />
                         <div className="absolute text-center top-14">
@@ -25,16 +27,17 @@ export default function Underconstruction() {
                                 CONSTRUCTION
                             </h1>
                         </div>
-                        <img
+                        <Image
                             src="AssetUnder.svg"
                             alt="AssetUnder"
-                            width={100}
-                            height={100}
+                            width="1000"
+                            height="1000"
+                            quality={100}
                             className="w-80 mt-6 md:mt-10 z-20"
                         />
                     </div>
                     <div className="flex flex-col justify-center items-center">
-                        <h1>Sorry for the trouble, we'll be back soon!</h1>
+                        <h1>Sorry for the trouble, we&apos;ll be back soon!</h1>
                         <button
                             type="button"
                             className="bg-white text-center w-48 rounded-2xl h-14 relative font-sans text-black text-xl font-semibold group mt-2"
